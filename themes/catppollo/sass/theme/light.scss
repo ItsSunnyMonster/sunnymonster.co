@@ -1,0 +1,27 @@
+$bg-0: #eff1f5;
+$bg-1: #e6e9ef;
+$bg-2: #dce0e8;
+
+$text-0: #4c4f69;
+$text-1: #5c5f77;
+
+:root.light {
+  --text-0: #{$text-0};
+  --text-1: #{$text-1};
+  --text-meta: #8c8fa1;
+  --text-time: #9ca0b0;
+
+  --bg-0: #{$bg-0};
+  --bg-1: #{$bg-1};
+  --bg-2: #{$bg-2};
+
+  --border-color: var(--bg-2);
+
+  --primary-color: #df8e1d;
+  --hover-color: #4c4f69;
+
+  // invert colour on hover for consistency
+  // .social :hover {
+  //   filter: invert(1);
+  // }
+}

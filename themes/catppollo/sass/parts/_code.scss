@@ -1,0 +1,474 @@
+@import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
+
+// Define base colors and fonts for light and dark themes
+:root {
+  --code-font: "Courier New", monospace;
+  --bg-primary: var(--bg-1);
+  --text-color: var(--text-0); // Color of the code text
+  --label-color: var(--base); // Text color of the label
+
+  --hightlight-color: #dce0e8;
+
+  // catppuccin colours
+  --rosewater: #dc8a78;
+  --flamingo: #dd7878;
+  --pink: #ea76cb;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --maroon: #e64553;
+  --peach: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --teal: #179299;
+  --sky: #04a5e5;
+  --sapphire: #209fb5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+  --text: #4c4f69;
+  --subtext1: #5c5f77;
+  --subtext0: #6c6f85;
+  --overlay2: #7c7f93;
+  --overlay1: #8c8fa1;
+  --overlay0: #9ca0b0;
+  --surface2: #acb0be;
+  --surface1: #bcc0cc;
+  --surface0: #ccd0da;
+  --base: #eff1f5;
+  --mantle: #e6e9ef;
+  --crust: #dce0e8;
+}
+
+:root.dark {
+  --hightlight-color: #313244;
+  --label-color: var(--base);
+
+  // catppuccin
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #313244;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+}
+
+// Define language colors map
+$language-colors: (
+  "js": (
+    var(--yellow),
+    "JavaScript",
+  ),
+  "yaml": (
+    var(--red),
+    "YAML",
+  ),
+  "shell": (
+    var(--green),
+    "Shell",
+  ),
+  // Updated to a more specific green shade
+  "json":
+    (
+      var(--teal),
+      "JSON",
+    ),
+  "python": (
+    var(--sapphire),
+    "Python",
+  ),
+  // Using the specific Python blue
+  "css":
+    (
+      var(--blue),
+      "CSS",
+    ),
+  "go": (
+    var(--sky),
+    "Go",
+  ),
+  // Official Go color
+  "markdown":
+    (
+      var(--blue),
+      "Markdown",
+    ),
+  "rust": (
+    var(--red),
+    "Rust",
+  ),
+  // Adjusted to match Rust's branding
+  "java":
+    (
+      var(--peach),
+      "Java",
+    ),
+  // Oracle Java color
+  "csharp":
+    (
+      var(--green),
+      "C#",
+    ),
+  "ruby": (
+    var(--red),
+    "Ruby",
+  ),
+  "swift": (
+    var(--maroon),
+    "Swift",
+  ),
+  "php": (
+    var(--mauve),
+    "PHP",
+  ),
+  "typescript": (
+    var(--blue),
+    "TypeScript",
+  ),
+  "scala": (
+    var(--red),
+    "Scala",
+  ),
+  "kotlin": (
+    var(--peach),
+    "Kotlin",
+  ),
+  "lua": (
+    var(--blue),
+    "Lua",
+  ),
+  "perl": (
+    var(--sapphire),
+    "Perl",
+  ),
+  "haskell": (
+    var(--mauve),
+    "Haskell",
+  ),
+  "r": (
+    var(--blue),
+    "R",
+  ),
+  "dart": (
+    var(--teal),
+    "Dart",
+  ),
+  "elixir": (
+    var(--flamingo),
+    "Elixir",
+  ),
+  "clojure": (
+    var(--lavender),
+    "Clojure",
+  ),
+  "bash": (
+    var(--green),
+    "Bash",
+  ),
+  "default": (
+    var(--text),
+    "Code",
+  ),
+);
+
+@mixin base-label-style($bg-color, $text-color: var(--label-color)) {
+  background: $bg-color;
+  color: $text-color;
+  border-radius: 0 0 0.25rem 0.25rem;
+  font-size: 12px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  text-align: right;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 0.1rem;
+}
+
+// Example usage within a specific class for clarity
+.code-label {
+  @include base-label-style(var(--text)); // Default background color
+}
+
+@each $lang, $color-info in $language-colors {
+  .label-#{$lang} {
+    @include base-label-style(nth($color-info, 1));
+  }
+}
+
+code {
+  background-color: var(--bg-primary);
+  padding: 0.1em 0.2em;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  font-family: var(--code-font);
+}
+
+pre {
+  background-color: var(--bg-primary) !important;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  line-height: 1.4;
+  overflow-x: auto;
+  padding: 1em;
+  position: relative;
+
+  mark {
+    background-color: var(
+      --hightlight-color
+    ) !important; // Ensure mark uses the theme background
+    padding: 0;
+    border-radius: 0px;
+  }
+
+  code {
+    background-color: transparent !important;
+    color: var(--text-color);
+    font-size: 100%;
+    padding: 0;
+    border: none;
+    font-family: var(--code-font);
+
+    table {
+      margin: 0;
+      border-collapse: collapse;
+      font-family: var(--code-font);
+
+      mark {
+        display: block;
+        color: unset;
+        padding: 0;
+        background-color: var(--hightlight-color) !important;
+        filter: brightness(1.2); // Example to slightly increase brightness
+      }
+    }
+
+    td,
+    th,
+    tr {
+      padding: 0;
+      border-bottom: none;
+      border: none; // Ensure no borders around rows
+    }
+
+    tbody td:first-child {
+      text-align: center;
+      user-select: none;
+      min-width: 60px;
+      border-right: none;
+    }
+
+    tbody tr:nth-child(even),
+    thead tr {
+      background-color: unset;
+    }
+  }
+}
+
+.clipboard-button,
+.clipboard-button svg {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+  /* 5px from the bottom */
+  right: 5px;
+  /* 5px from the right */
+  z-index: 10;
+  background-color: transparent;
+  border: none;
+  fill: var(--primary-color);
+  /* Sets the color of the SVG, assuming it's an SVG icon */
+}
+
+.z-code {
+  color: var(--text);
+  background-color: var(--base);
+}
+
+.z-variable.z-parameter.z-function {
+  color: var(--text);
+}
+.z-comment,
+.z-punctuation.z-definition.z-comment {
+  color: var(--overlay2);
+}
+.z-punctuation.z-definition.z-string,
+.z-punctuation.z-definition.z-variable,
+.z-punctuation.z-definition.z-string,
+.z-punctuation.z-definition.z-parameters,
+.z-punctuation.z-definition.z-string,
+.z-punctuation.z-definition.z-array {
+  color: var(--text);
+}
+.z-none {
+  color: var(--text);
+}
+.z-keyword.z-operator {
+  color: var(--text);
+}
+.z-keyword {
+  color: var(--mauve);
+}
+.z-variable {
+  color: var(--maroon);
+}
+.z-entity.z-name.z-function,
+.z-meta.z-require,
+.z-support.z-function.z-any-method {
+  color: var(--blue);
+}
+.z-support.z-class,
+.z-entity.z-name.z-class,
+.z-entity.z-name.z-type.z-class {
+  color: var(--yellow);
+}
+.z-meta.z-class {
+  color: var(--yellow);
+}
+.z-keyword.z-other.z-special-method {
+  color: var(--blue);
+}
+.z-storage {
+  color: var(--mauve);
+}
+.z-support.z-function {
+  color: var(--blue);
+}
+.z-string,
+.z-constant.z-other.z-symbol,
+.z-entity.z-other.z-inherited-class {
+  color: var(--green);
+}
+.z-constant.z-numeric {
+  color: var(--peach);
+}
+.z-none {
+  color: var(--peach);
+}
+.z-constant {
+  color: var(--peach);
+}
+.z-entity.z-name.z-tag {
+  color: var(--red);
+}
+.z-entity.z-other.z-attribute-name {
+  color: var(--yellow);
+}
+.z-entity.z-other.z-attribute-name.z-id,
+.z-punctuation.z-definition.z-entity {
+  color: var(--overlay2);
+}
+.z-meta.z-selector {
+  color: var(--mauve);
+}
+.z-none {
+  color: var(--peach);
+}
+.z-markup.z-heading .z-punctuation.z-definition.z-heading,
+.z-entity.z-name.z-section {
+  color: var(--overlay2);
+}
+.z-keyword.z-other.z-unit {
+  color: var(--maroon);
+}
+.z-markup.z-bold,
+.z-punctuation.z-definition.z-bold {
+  color: var(--yellow);
+  font-weight: bold;
+}
+.z-markup.z-italic,
+.z-punctuation.z-definition.z-italic {
+  color: var(--mauve);
+  font-style: italic;
+}
+.z-markup.z-raw.z-inline {
+  color: var(--green);
+}
+.z-string.z-other.z-link {
+  color: var(--red);
+}
+.z-meta.z-link {
+  color: var(--maroon);
+}
+.z-markup.z-list {
+  color: var(--red);
+}
+.z-markup.z-quote {
+  color: var(--maroon);
+}
+.z-meta.z-separator {
+  color: var(--overlay2);
+  background-color: var(--base);
+}
+.z-markup.z-inserted,
+.z-markup.z-inserted.z-git_gutter {
+  color: var(--green);
+}
+.z-markup.z-deleted,
+.z-markup.z-deleted.z-git_gutter {
+  color: var(--red);
+}
+.z-markup.z-changed,
+.z-markup.z-changed.z-git_gutter {
+  color: var(--mauve);
+}
+.z-markup.z-ignored,
+.z-markup.z-ignored.z-git_gutter {
+  color: var(--overlay2);
+}
+.z-markup.z-untracked,
+.z-markup.z-untracked.z-git_gutter {
+  color: var(--overlay2);
+}
+.z-constant.z-other.z-color {
+  color: var(--green);
+}
+.z-string.z-regexp {
+  color: var(--green);
+}
+.z-constant.z-character.z-escape {
+  color: var(--green);
+}
+.z-punctuation.z-section.z-embedded,
+.z-variable.z-interpolation {
+  color: var(--yellow);
+}
+.z-invalid.z-illegal {
+  color: #2b303b;
+  background-color: var(--pink);
+}
+.z-markup.z-deleted.z-git_gutter {
+  color: var(--red);
+}
+.z-markup.z-inserted.z-git_gutter {
+  color: var(--green);
+}
+.z-markup.z-changed.z-git_gutter {
+  color: var(--mauve);
+}
+.z-markup.z-ignored.z-git_gutter {
+  color: var(--overlay2);
+}
+.z-markup.z-untracked.z-git_gutter {
+  color: var(--overlay2);
+}
