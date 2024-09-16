@@ -318,13 +318,13 @@ pre {
 .z-punctuation.z-definition.z-parameters,
 .z-punctuation.z-definition.z-string,
 .z-punctuation.z-definition.z-array {
-  color: var(--text);
+  color: var(--green);
 }
 .z-none {
   color: var(--text);
 }
 .z-keyword.z-operator {
-  color: var(--text);
+  color: var(--sky);
 }
 .z-keyword {
   color: var(--mauve);
@@ -344,6 +344,12 @@ pre {
 }
 .z-meta.z-class {
   color: var(--yellow);
+}
+.z-meta.z-block,
+.z-meta.z-group,
+.z-meta.z-terminator,
+.z-meta.z-parameters.z-function {
+  color: var(--overlay2);
 }
 .z-keyword.z-other.z-special-method {
   color: var(--blue);
