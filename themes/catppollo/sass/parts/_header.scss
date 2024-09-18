@@ -115,8 +115,6 @@ header .main {
     transition: transform 0.25s var(--ease-out-5);
 
     @supports (cx: 1) {
-      transform: translateX(0);
-      cx: 17;
       transition: cx 0.25s var(--ease-out-5);
     }
   }
