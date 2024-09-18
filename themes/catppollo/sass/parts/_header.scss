@@ -1,3 +1,5 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+
 .page-header {
   font-size: 2.5em;
   line-height: 100%;
@@ -35,10 +37,96 @@ header .main {
   position: relative;
 }
 
-header .social svg,
-header #dark-mode-toggle img {
-  width: 16px;
-  height: 16px;
+.main a {
+  z-index: 9999;
+}
+
+.sun-and-moon {
+  & > :is(.moon, .sun, .sun-beams) {
+    transform-origin: center center;
+  }
+
+  & > :is(.moon, .sun) {
+    fill: var(--text-0);
+
+    .theme-toggle:is(:hover, :focus-visible) > & {
+      fill: var(--subtext0);
+    }
+  }
+
+  & > .sun-beams {
+    stroke: var(--text-0);
+    stroke-width: 2px;
+
+    .theme-toggle:is(:hover, :focus-visible) & {
+      stroke: var(--subtext0);
+    }
+  }
+}
+
+.sun-and-moon {
+  html.dark & {
+    & > .sun {
+      transform: scale(1.75);
+    }
+
+    & > .sun-beams {
+      opacity: 0;
+    }
+
+    & > .moon > circle {
+      transform: translateX(-7px);
+
+      @supports (cx: 1) {
+        transform: translateX(0);
+        cx: 17;
+      }
+    }
+  }
+}
+
+.sun-and-moon {
+  & > .sun {
+    transition: transform 0.5s var(--ease-elastic-3);
+  }
+
+  & > .sun-beams {
+    transition:
+      transform 0.5s var(--ease-elastic-4),
+      opacity 0.5s var(--ease-3);
+  }
+
+  html.dark & {
+    & > .sun {
+      transform: scale(1.75);
+      transition-timing-function: var(--ease-3);
+      transition-duration: 0.25s;
+    }
+
+    & > .sun-beams {
+      transform: rotateZ(-25deg);
+      transition-duration: 0.15s;
+    }
+  }
+}
+
+.sun-and-moon {
+  & .moon > circle {
+    transition: transform 0.25s var(--ease-out-5);
+
+    @supports (cx: 1) {
+      transform: translateX(0);
+      cx: 17;
+      transition: cx 0.25s var(--ease-out-5);
+    }
+  }
+
+  html.dark & {
+    & > .moon > circle {
+      transition-delay: 0.25s;
+      transition-duration: 0.5s;
+    }
+  }
 }
 
 header .socials {
@@ -75,7 +163,7 @@ header .socials {
   border: unset;
   width: 24px;
   height: 24px;
-  fill: var(--text);
+  fill: var(--text-0);
   transition: fill 150ms ease-in-out;
 }
 
@@ -86,6 +174,7 @@ header .socials {
 header nav {
   display: flex;
   gap: 10px;
+  z-index: 9998;
 }
 
 header nav a {
@@ -105,6 +194,7 @@ header nav div {
   display: flex;
   height: 100%;
   align-items: center;
+  touch-action: manipulation;
 }
 
 .hamburger input::before,
@@ -114,7 +204,7 @@ header nav div {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: var(--text);
+  background-color: var(--text-0);
   border-radius: 9999px;
   transition: all 300ms ease-in-out;
   box-sizing: border-box;
@@ -189,7 +279,9 @@ header nav div {
     transform: translate(0, -300px);
     opacity: 0;
 
-    transition: all 300ms ease-in-out;
+    transition:
+      transform 300ms ease-in-out,
+      opacity 300ms ease-in-out;
   }
 
   .main:has(.hamburger input:checked) ~ nav {
@@ -222,11 +314,28 @@ header nav div {
   justify-content: center;
 }
 
-#dark-mode-toggle > img {
-  display: none;
-  width: 15px;
-  height: 15px;
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px;
+}
+
+#dark-mode-toggle > svg {
+  width: 24px;
+  max-height: unset;
+  height: 24px;
   border: unset;
+  inline-size: 100%;
+  block-size: 100%;
+  stroke-linecap: round;
+  color: var(--text);
 }
 
 h1,
