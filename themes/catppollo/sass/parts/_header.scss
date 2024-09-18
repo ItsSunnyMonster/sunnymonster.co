@@ -246,14 +246,14 @@ header nav div {
   transform: translate(0, -8px) rotate(315deg);
 }
 
-@media (min-width: 681px) {
+@media (min-width: 701px) {
   .mobile {
     display: none;
   }
 }
 
 /* Mobile-specific adjustments */
-@media (max-width: 680px) {
+@media (max-width: 700px) {
   header {
     flex-direction: column;
     align-items: center;
@@ -276,6 +276,7 @@ header nav div {
 
     transform: translate(0, -300px);
     opacity: 0;
+    pointer-events: none;
 
     transition:
       transform 300ms ease-in-out,
@@ -285,6 +286,7 @@ header nav div {
   .main:has(.hamburger input:checked) ~ nav {
     transform: translate(0, 0);
     opacity: 1;
+    pointer-events: unset;
   }
 
   nav > a {

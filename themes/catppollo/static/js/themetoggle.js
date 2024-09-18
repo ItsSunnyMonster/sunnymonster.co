@@ -23,13 +23,6 @@ function updateItemToggleTheme() {
     darkModeStyle.disabled = mode === "light";
   }
 
-  const sunIcon = document.getElementById("sun-icon");
-  const moonIcon = document.getElementById("moon-icon");
-  if (sunIcon && moonIcon) {
-    sunIcon.style.display = mode === "dark" ? "inline-block" : "none";
-    moonIcon.style.display = mode === "light" ? "inline-block" : "none";
-  }
-
   let htmlElement = document.querySelector("html");
   if (mode === "dark") {
     htmlElement.classList.remove("light");
