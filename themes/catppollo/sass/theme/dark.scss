@@ -21,13 +21,4 @@ $text-1: #bac2de;
 
   --primary-color: #f9e2af;
   --hover-color: #1e1e2e;
-
-  .social > img {
-    filter: invert(1);
-    transition: filter 150ms ease-in-out;
-  }
-
-  .social:hover > img {
-    filter: invert(0);
-  }
 }
