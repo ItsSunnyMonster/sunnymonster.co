@@ -157,6 +157,14 @@ header .socials {
   align-items: center;
 }
 
+.social::after {
+  background: none;
+}
+
+.social:hover {
+  background: var(--primary-color);
+}
+
 .social > svg {
   border: unset;
   width: 24px;

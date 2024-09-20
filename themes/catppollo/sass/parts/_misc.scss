@@ -1,3 +1,5 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+
 .primary-color {
   color: var(--primary-color);
 }
@@ -40,13 +42,13 @@ blockquote {
 }
 
 a {
-  border-bottom: 3px solid var(--primary-color);
+  //border-bottom: 3px solid var(--primary-color);
   color: inherit;
   text-decoration: none;
 
   // Make sure the underline is at the top
   position: relative; // needed for z-index
-  z-index: 1;
+  //z-index: 1;
 
   transition: all 150ms ease-in-out;
 }
@@ -56,9 +58,28 @@ a.zola-anchor {
 }
 
 a:hover {
-  background-color: var(--primary-color);
   color: var(--hover-color);
-  border-radius: 4px;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  z-index: -1;
+  border-radius: 6px;
+  transform: translateY(-2px);
+  transition: all 150ms var(--ease-elastic-3);
+}
+
+a:hover::after {
+  left: -0.3em;
+  right: -0.3em;
+  transform: translateY(0px);
+  height: calc(100% + 8px);
 }
 
 time {
