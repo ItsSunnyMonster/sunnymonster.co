@@ -72,7 +72,7 @@ a::after {
   z-index: -1;
   border-radius: 6px;
   transform: translateY(-2px);
-  transition: all 150ms var(--ease-elastic-3);
+  transition: all 150ms ease-in-out;
 }
 
 a:hover::after {
@@ -80,6 +80,7 @@ a:hover::after {
   right: -0.3em;
   transform: translateY(0px);
   height: calc(100% + 8px);
+  transition: all 150ms var(--ease-elastic-3);
 }
 
 time {
