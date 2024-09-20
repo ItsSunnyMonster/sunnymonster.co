@@ -122,7 +122,7 @@ $language-colors: (
       "Java",
     ),
   // Oracle Java color
-  "csharp":
+  "cs":
     (
       var(--green),
       "C#",
@@ -306,7 +306,7 @@ pre {
 }
 
 .z-variable.z-parameter.z-function {
-  color: var(--text);
+  color: var(--maroon);
 }
 .z-comment,
 .z-punctuation.z-definition.z-comment {
@@ -345,7 +345,9 @@ pre {
 .z-meta.z-class {
   color: var(--yellow);
 }
-.z-meta.z-block,
+.z-meta.z-block {
+  color: var(--overlay2);
+}
 .z-meta.z-group,
 .z-meta.z-terminator,
 .z-meta.z-parameters.z-function {
@@ -364,9 +366,11 @@ pre {
   color: var(--blue);
 }
 .z-string,
-.z-constant.z-other.z-symbol,
-.z-entity.z-other.z-inherited-class {
+.z-constant.z-other.z-symbol {
   color: var(--green);
+}
+.z-entity.z-other.z-inherited-class {
+  color: var(--yellow);
 }
 .z-constant.z-numeric {
   color: var(--peach);
@@ -480,4 +484,16 @@ pre {
 }
 .z-markup.z-untracked.z-git_gutter {
   color: var(--overlay2);
+}
+.z-punctuation.z-terminator {
+  color: var(--overlay2);
+}
+.z-punctuation.z-accessor {
+  color: var(--overlay2);
+}
+.z-meta.z-path {
+  color: var(--lavender);
+}
+.z-variable.z-function {
+  color: var(--blue);
 }
