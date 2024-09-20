@@ -329,8 +329,9 @@ header nav div {
 
 #dark-mode-toggle > svg {
   width: 24px;
-  max-height: unset;
+  max-width: 24px;
   height: 24px;
+  max-height: 24px;
   border: unset;
   inline-size: 100%;
   block-size: 100%;
