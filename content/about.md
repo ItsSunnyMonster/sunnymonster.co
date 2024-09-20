@@ -6,7 +6,8 @@ Hi! I'm SunnyMonster (and no, my first name is not Sunny, but you could call me 
 
 ## Who am I exactly?
 
-I am an amateur programmer, composer and conlanger. For programming and conlanging, I have never really finished any projects that I'm happy with. Although I am starting to make a voxel engine in Rust called [SMve](https://github.com/smve-rs/smve) which I am hoping to bring to a decent state where I can call it one of my projects. I have been working on and off on some languages but I don't really have a plan yet. For composing, I have written a few pieces for symphony orchestra, which you can find on my [YouTube channel](https://youtube.com/@ItsSunnyMonster). I will link more of my projects on [Projects](/projects).
+I am a programmer and composer who easily gets interested in a variety of things from linguistics to psychology.
+Not sure what else to say here...
 
 ## Etymology of my Name(s)
 

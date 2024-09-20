@@ -3,26 +3,19 @@ title = "home"
 template = "homepage.html"
 +++
 
-Hi, I'm SunnyMonster, and welcome to my site!
+Hi, I'm **SunnyMonster**, a programmer, composer and (almost) everything-enthusiast from New Zealand. Welcome to my site!
 
-Check out my about me [here](/about) if you have no idea who I am :)
+## Currently Working On
 
-I really have no idea what else to fill this page... I guess you will get some code snippets:
+- **This Website**: I am a bit rusty with web-dev, so it is taking a while to iron out all the bugs.
+  I will upload the code of this website to GitHub very soon after I clean up my horrifically formatted
+  code. In the meantime, check back here every so often since this list can change and also I will be posting
+  about random stuff sometimes.
 
-```rust
-fn main() {
-  println!("Hello World!");
+- **SMve / Order of the Stone**: My project codenamed "Minecraft: Reimagined", which is an attempt at making
+  a Minecraft-like game completely from scratch, hopefully avoiding the fundamental pitfalls the actual Minecraft
+  experienced.
 
-  panic!("Oh no I don't know what else to write in here either.");
-}
-```
-
-```c
-#include <stdio.h>
-
-int main(int argc, char **argv) {
-  printf("I guess here's some C as well");
-
-  return 0;
-}
-```
+- **A (slightly unconventional) video essay about English spelling**: A school assignment which I will upload
+  to YouTube once it's done, where I talk about a slightly unconventional and very impractical spelling
+  reform idea I thought of.
