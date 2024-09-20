@@ -173,8 +173,7 @@ header .socials {
 
 .social > svg {
   border: unset;
-  width: 24px;
-  height: 24px;
+  width: 15px;
   fill: var(--text-0);
   transition: fill 150ms ease-in-out;
 }
@@ -309,6 +308,13 @@ header nav div {
 
   header .main {
     width: 100%;
+  }
+
+  .social svg {
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
   }
 }
 
