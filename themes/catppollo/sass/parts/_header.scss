@@ -184,7 +184,7 @@ header .socials {
 
 header nav {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   z-index: 9998;
 }
 
@@ -197,6 +197,11 @@ header nav a {
 header nav div {
   display: flex;
   align-items: center;
+}
+
+header nav .menu-wrapper {
+  display: flex;
+  gap: 15px;
 }
 
 .hamburger {
@@ -278,7 +283,7 @@ header nav div {
     display: none;
   }
 
-  nav {
+  header nav {
     flex-direction: column;
     width: 100%;
     top: 4em;
@@ -290,6 +295,8 @@ header nav div {
     transform: translate(0, -300px);
     opacity: 0;
     pointer-events: none;
+
+    gap: 15px;
 
     transition:
       transform 300ms ease-in-out,
@@ -304,6 +311,10 @@ header nav div {
 
   nav > a {
     margin: auto;
+  }
+
+  nav .menu-wrapper {
+    flex-direction: column;
   }
 
   header .main {

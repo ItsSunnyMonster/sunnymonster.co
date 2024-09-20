@@ -18,9 +18,11 @@
     </div>
 
     <nav>
-        {% for menu in config.extra.menu | default(value=[]) %}
-        <a href={{ get_url(path=menu.url) }}>{{ menu.name }}</a>
-        {% endfor %}
+        <div class="menu-wrapper">
+            {% for menu in config.extra.menu | default(value=[]) %}
+            <a href={{ get_url(path=menu.url) }}>{{ menu.name }}</a>
+            {% endfor %}
+        </div>
 
         {% if config.extra.theme | default(value="toggle") == "toggle" %}
 
