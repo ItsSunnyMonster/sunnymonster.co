@@ -7,6 +7,12 @@
   margin: 4rem 0px 1rem 0px;
 }
 
+.page-header span {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 .centered-header {
   font-family: var(--header-font);
   position: absolute;
