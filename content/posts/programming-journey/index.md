@@ -2,6 +2,7 @@
 title = "my_programming_journey"
 description = "a summary of all the languages I explored."
 date = "2024-09-20"
+updated = "2024-09-21"
 
 [taxonomies]
 tags = ["programming"]
@@ -145,9 +146,42 @@ const p = document.querySelector("p");
 p.innerText = "Hello World!";
 ```
 
-Of course getting into web dev means exploring all the different things that comes with it, like React or Electron. But I never
+Of course getting into web dev means exploring all the different things that comes with it, like React, Electron, or even discord bots with node.js. But I never
 got so far as to make a complete project in those. Although, I did make a website detailing the inner workings of dams for a school
 project. You can find it [here](https://allaboutdams.netlify.app).
+
+# Python
+
+The first version of this post actually didn't contain this because I never really sat down and followed a Python tutorial. But I did use Python
+sometimes to write small scripts or even a script that generated a JSON which can then be loaded on to a website to generate one of those racing
+bar graph videos of the message counts of every member in my Discord server.
+
+Oh! I also switched to Linux a few times before being forced to switch back because it just so happened that my computer kept crashing Linux, because
+of some driver bug I think. But while I was using Linux, I used a tiling window manager called [qtile](https://qtile.org/) which is configured with Python.
+
+So here's hello world in python:
+
+```py
+def main():
+  print("Hello World!")
+
+
+if __name__ == "__main__":
+  main()
+```
+
+# Haskell
+
+This is another one of those languages I briefly touched but never learned. I used this language because I was experimenting with different tiling
+window managers, and Haskell is used to configure XMonad.
+
+Here's hello world in Haskell:
+
+```hs
+main :: IO()
+main = do
+  print ("Hello World!")
+```
 
 # C++ Again and OpenGL
 
@@ -157,6 +191,17 @@ Well it's around this time that I discovered the existence of OpenGL. I followed
 [The Cherno](https://www.youtube.com/playlist?list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2) and then later his Game Engine series.
 It got me back into C++, and this time I finally learned the fundamentals of it and really understood it. Stuff like pointers, heap allocations,
 etc. etc. This is really when I first got introduced to writing more complex programs.
+
+# Lua
+
+Similar to Python, I didn't include this in the first version of this post because I don't actually know Lua that well. But I did say I will include
+every language I have touched, so I'll have to include this. A CMake alternative is Premake, which used Lua files to define the build process.
+
+Here's hello world in Lua:
+
+```lua
+print("Hello World!")
+```
 
 # Java and Kotlin
 

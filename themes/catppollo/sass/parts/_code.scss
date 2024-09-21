@@ -91,7 +91,7 @@ $language-colors: (
       var(--teal),
       "JSON",
     ),
-  "python": (
+  "py": (
     var(--sapphire),
     "Python",
   ),
@@ -147,7 +147,7 @@ $language-colors: (
     var(--red),
     "Scala",
   ),
-  "kotlin": (
+  "kt": (
     var(--peach),
     "Kotlin",
   ),
@@ -501,5 +501,8 @@ pre {
   color: var(--overlay2);
 }
 .z-meta.z-brace {
+  color: var(--overlay2);
+}
+.z-punctuation.z-section {
   color: var(--overlay2);
 }
