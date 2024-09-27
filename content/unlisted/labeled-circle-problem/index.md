@@ -5,6 +5,7 @@ date = "2024-09-27"
 
 As per the diagram below, there is a circle centred on $O$ with radius $r$,
 and a rectangle with a centre $C$ and width and height of $w$ and $h$ respectively.
+$OB$ is parallel to the $x$-axis.
 
 Given any angle $\alpha$, $C$ must lie on the ray $OA$ and the rectangle must intersect the circle at one and only one point.
 
