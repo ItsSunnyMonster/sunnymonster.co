@@ -21,4 +21,4 @@ title = "::projects"
 - [Fantastica](https://push.fm/fl/fantastica)
 - [Eleutheria](https://push.fm/fl/eleutheria)
 - [Fantastica in E Flat](https://push.fm/fl/fantastica-eb)
-- [Last Chapter](https://push.fm/fl/last-chapter)
+- [Last Chapter](https://push.fm/fl/lastchapter)
