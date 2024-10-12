@@ -19,3 +19,5 @@ Hi, I'm **SunnyMonster**, a programmer, composer and (almost) everything-enthusi
 - **A (slightly unconventional) video essay about English spelling**: A school assignment which I will upload
   to YouTube once it's done, where I talk about a slightly unconventional and very impractical spelling
   reform idea I thought of.
+
+> also yes of course the colour scheme is catppuccin. it's the best colour scheme, ~you can't~ change my mind.
