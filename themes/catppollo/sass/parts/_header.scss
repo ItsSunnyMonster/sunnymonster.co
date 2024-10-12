@@ -30,6 +30,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1em 0;
+  font-family: var(--nav-font);
 }
 
 header .main {
@@ -337,6 +338,7 @@ header nav .menu-wrapper {
   /* Aligns items vertically in the middle */
   flex-wrap: wrap;
   /* Allows items to wrap as needed */
+  font-family: var(--nav-font);
 }
 
 .icons-wrapper {
@@ -378,6 +380,7 @@ h5,
 h6 {
   font-size: 1.2rem;
   margin-top: 2em;
+  font-family: var(--nav-font);
 }
 
 h1::before {
