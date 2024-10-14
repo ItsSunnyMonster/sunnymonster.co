@@ -24,6 +24,8 @@ html {
   color: var(--text-0);
   font-family: var(--text-font);
   line-height: 1.6em;
+
+  transition: background-color 400ms ease-in-out;
 }
 
 .content {
