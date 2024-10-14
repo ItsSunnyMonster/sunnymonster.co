@@ -35,3 +35,4 @@ fancy_code = true
 toc = true
 mathjax = true
 mathjax_dollar_inline_enable = true
+use_cdn = true
