@@ -3,13 +3,13 @@ title = "home"
 template = "homepage.html"
 +++
 
-Hi, I'm **SunnyMonster**(he/they 🩷💜💙), a 16 year-old programmer, composer and (almost) everything-enthusiast from New Zealand. Welcome to my site!
+Hi, I'm **SunnyMonster** (he/they 🩷💜💙), a 16 year-old programmer, composer and (almost) everything-enthusiast from New Zealand. Welcome to my site!
 
 (not sure why that felt so cringe to write)
 
 ## Currently Working On
 
-- **This Website**: I am a bit rusty with web-dev, so it is taking a while to iron out all the bugs.
+- **This Website**: I am a bit rusty (ha get it 🦀) with web-dev, so it is taking a while to iron out all the bugs.
   I will upload the code of this website to GitHub very soon after I clean up my horrifically formatted
   code. In the meantime, check back here every so often since this list can change and also I will be posting
   about random stuff sometimes.
