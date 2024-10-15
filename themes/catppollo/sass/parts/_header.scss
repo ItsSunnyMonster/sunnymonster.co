@@ -187,6 +187,8 @@ header nav {
   display: flex;
   gap: 5px;
   z-index: 9998;
+  transition: background-color 400ms ease-in-out;
+  background-color: var(--bg-0);
 }
 
 header nav a {
@@ -289,7 +291,6 @@ header nav .menu-wrapper {
     width: 100%;
     top: 4em;
     position: absolute;
-    background-color: var(--bg-0);
     padding-bottom: 1em;
     border-bottom: 4px solid var(--primary-color);
 
@@ -301,7 +302,8 @@ header nav .menu-wrapper {
 
     transition:
       transform 300ms ease-in-out,
-      opacity 300ms ease-in-out;
+      opacity 300ms ease-in-out,
+      background-color 400ms ease-in-out;
   }
 
   .main:has(.hamburger input:checked) ~ nav {

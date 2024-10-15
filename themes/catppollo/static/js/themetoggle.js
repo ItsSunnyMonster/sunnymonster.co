@@ -57,6 +57,9 @@ window.onload = () => {
       setTheme(theme);
       updateItemToggleTheme();
     });
+
+  document.querySelector("html").style.transition =
+    "background-color 400ms ease-in-out";
 };
 
 // Update the toggle theme on page load
