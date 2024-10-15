@@ -27,7 +27,7 @@ menu = [
   { name = "::projects", url = "/projects", weight = 3 },
 ]
 socials = [
-  { name = "mastodon", url = "https://mastodon.social/@SunnyMonster", icon = "mastodon" },
+  { name = "fediverse", url = "https://sharkey.world/@sunnymonster", icon = "fediverse_generic" },
   { name = "github", url = "https://github.com/ItsSunnyMonster", icon = "github" },
   { name = "youtube", url = "https://youtube.com/@smprogramming", icon = "youtube" },
 ]
