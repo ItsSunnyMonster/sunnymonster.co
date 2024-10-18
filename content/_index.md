@@ -3,7 +3,7 @@ title = "home"
 template = "homepage.html"
 +++
 
-Hi, I'm **SunnyMonster** (he/they 🩷💜💙), a 16 year-old programmer, composer and (almost) everything-enthusiast from New Zealand. Welcome to my site!
+Hi, I'm **SunnyMonster** (he/they <span style="white-space: nowrap">🩷💜💙</span>), a 16 year-old programmer, composer and (almost) everything-enthusiast from New Zealand. Welcome to my site!
 
 (not sure why that felt so cringe to write)
 
