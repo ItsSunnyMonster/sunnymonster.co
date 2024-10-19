@@ -50,6 +50,8 @@ a {
   position: relative; // needed for z-index
   //z-index: 1;
 
+  white-space: nowrap;
+
   transition: all 150ms ease-in-out;
 }
 
