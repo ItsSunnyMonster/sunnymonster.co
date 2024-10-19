@@ -1,0 +1,37 @@
+footer {
+  margin-top: auto;
+  width: 100%;
+  font-size: 13px;
+  color: var(--overlay0);
+  background-color: var(--crust);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+
+  transition: background-color 400ms ease-in-out;
+}
+
+footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10em;
+  max-width: 1000px;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+footer a::after {
+  display: none;
+}
+
+footer a:hover {
+  color: var(--subtext0);
+}
