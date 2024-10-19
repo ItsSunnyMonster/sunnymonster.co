@@ -221,6 +221,10 @@ code {
   border-radius: 5px;
   border: 1px solid var(--border-color);
   font-family: var(--code-font);
+
+  transition:
+    background-color 400ms ease-in-out,
+    border 400ms ease-in-out;
 }
 
 pre {
@@ -231,6 +235,10 @@ pre {
   overflow-x: auto;
   padding: 1em;
   position: relative;
+
+  transition:
+    background-color 400ms ease-in-out,
+    border 400ms ease-in-out;
 
   mark {
     background-color: var(
