@@ -64,6 +64,10 @@
          {% endif %}
     {% endif %}
 
+    {% if config.extra.accent_color %}
+        <meta content={{ config.extra.accent_color }} data-react-helmet="true" name="theme-color" />
+    {% endif %}
+
     <script>
         function get_dark() {
           return "{{ get_url(path="icons/no_background.png") }}";
@@ -79,6 +83,7 @@
     {# Favicon #}
     {% if config.extra.favicon %}
         <link rel="icon" type="image/png" href={{ get_url(path=config.extra.favicon) }} />
+        <meta content={{ get_url(path=config.extra.favicon) }} property="og:image" />
     {% endif %}
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">

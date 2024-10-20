@@ -5,6 +5,8 @@ title = "sunny_monster"
 
 description = "SunnyMonster's personal website :)"
 
+accent_color = "#f9e2af"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
