@@ -64,6 +64,15 @@
          {% endif %}
     {% endif %}
 
+    <script>
+        function get_dark() {
+          return "{{ get_url(path="icons/no_background.png") }}";
+        }
+        function get_light() {
+          return "{{ get_url(path="icons/light.png") }}";
+        }
+    </script>
+
     <link rel="preload" href="https://unpkg.com/open-props/easings.min.css" as="style" />
     <link rel="preload" href="https://unpkg.com/@catppuccin/palette/css/catppuccin.css" as="style" />
 
