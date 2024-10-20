@@ -29,13 +29,13 @@ function updateItemToggleTheme() {
     htmlElement.classList.remove("light");
     htmlElement.classList.add("dark");
     iconElements.forEach((img) => {
-      img.style.backgroundImage = "url('icons/no_background.png')";
+      img.src = "icons/no_background.png";
     });
   } else if (mode === "light") {
     htmlElement.classList.remove("dark");
     htmlElement.classList.add("light");
     iconElements.forEach((img) => {
-      img.style.backgroundImage = "url('icons/light.png')";
+      img.src = "icons/light.png";
     });
   }
 }
