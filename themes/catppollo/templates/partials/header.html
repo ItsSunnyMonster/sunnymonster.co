@@ -78,7 +78,7 @@
 
     {# Favicon #}
     {% if config.extra.favicon %}
-        <link rel="icon" type="image/png" href={{ config.extra.favicon }} />
+        <link rel="icon" type="image/png" href={{ get_url(path=config.extra.favicon) }} />
     {% endif %}
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
