@@ -44,7 +44,8 @@ header .main {
   position: relative;
 }
 
-.main a {
+.main a,
+.main img {
   z-index: 9999;
 }
 
@@ -191,6 +192,10 @@ header nav {
   background-color: var(--bg-0);
 }
 
+header img {
+  border: none !important;
+}
+
 header nav a {
   // margin: 6px 0px;
   display: flex;
@@ -267,14 +272,14 @@ header nav .menu-wrapper {
   transform: translate(0, -8px) rotate(315deg);
 }
 
-@media (min-width: 701px) {
+@media (min-width: 751px) {
   .mobile {
     display: none;
   }
 }
 
 /* Mobile-specific adjustments */
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   header {
     flex-direction: column;
     align-items: center;

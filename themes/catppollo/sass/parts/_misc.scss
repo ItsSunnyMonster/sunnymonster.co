@@ -157,3 +157,10 @@ del {
   overflow-x: auto;
   overflow-y: hidden;
 }
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background-image: url("icons/no_background.png");
+  background-size: cover;
+}

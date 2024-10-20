@@ -24,12 +24,19 @@ function updateItemToggleTheme() {
   }
 
   let htmlElement = document.querySelector("html");
+  let iconElements = document.querySelectorAll(".logo");
   if (mode === "dark") {
     htmlElement.classList.remove("light");
     htmlElement.classList.add("dark");
+    iconElements.forEach((img) => {
+      img.style.backgroundImage = "url('icons/no_background.png')";
+    });
   } else if (mode === "light") {
     htmlElement.classList.remove("dark");
     htmlElement.classList.add("light");
+    iconElements.forEach((img) => {
+      img.style.backgroundImage = "url('icons/light.png')";
+    });
   }
 }
 
@@ -61,6 +68,10 @@ window.onload = () => {
   document.querySelector("html").style.transition =
     "background-color 400ms ease-in-out";
 };
+
+window.addEventListener("DOMContentLoaded", () => {
+  updateItemToggleTheme();
+});
 
 // Update the toggle theme on page load
 updateItemToggleTheme();
