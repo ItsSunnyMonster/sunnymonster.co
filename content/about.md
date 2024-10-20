@@ -1,5 +1,6 @@
 +++
 title = "::about"
+description = "About SunnyMonster"
 +++
 
 Hi! I'm SunnyMonster (and no, my first name is not Sunny, but you could call me that if you wish) and this is my personal website <span style="font-size: 0.7em">(wHo WoUlD'vE kNoWn!!11!11!)</span>. Here you will find my [blogs](/posts) where I will occasionally share things that I happen to be doing at any given time. You will also find links to my [projects](/projects).

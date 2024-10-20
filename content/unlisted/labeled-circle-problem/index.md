@@ -1,6 +1,7 @@
 +++
 title = "labeled_circle_problem"
 date = "2024-09-27"
+description = "a hard maths problem"
 +++
 
 As per the diagram below, there is a circle centred on $O$ with radius $r$,

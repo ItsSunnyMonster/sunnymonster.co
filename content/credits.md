@@ -1,5 +1,6 @@
 +++
 title = "::credits"
+description = "Credits to anyone who helpped in the making of this website"
 +++
 
 ## Tools

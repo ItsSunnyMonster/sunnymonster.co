@@ -1,5 +1,6 @@
 +++
 title = "::projects"
+description = "my projects"
 +++
 
 # Programming
