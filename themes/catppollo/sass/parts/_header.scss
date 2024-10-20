@@ -337,14 +337,20 @@ header nav .menu-wrapper {
   }
 }
 
+@media (max-width: 460px) {
+  .main {
+    justify-content: flex-start !important;
+  }
+}
+
 .meta {
   color: var(--text-meta);
   display: flexbox;
   /* This changes the meta class to use flexbox, which ensures inline display */
-  align-items: center;
+  align-itms: center;
   /* Aligns items vertically in the middle */
   flex-wrap: wrap;
-  /* Allows items to wrap as needed */
+  /* Allowitems to wrap as needed */
   font-family: var(--nav-font);
 }
 
