@@ -68,6 +68,7 @@
         <meta content={{ config.extra.accent_color }} data-react-helmet="true" name="theme-color" />
     {% endif %}
 
+    {% if config.extra.logo_dark and config.extra.logo_light %}
     <script>
         function get_dark() {
           return "{{ get_url(path=config.extra.logo_dark) }}";
@@ -75,6 +76,15 @@
         function get_light() {
           return "{{ get_url(path=config.extra.logo_light) }}";
         }
+    </script>
+    {% endif %}
+
+    <script>
+      {% if config.extra.logo_dark and config.extra.logo_light %}
+      const hasLogo = true;
+      {% else %}
+      const hasLogo = false;
+      {% endif %}
     </script>
 
     <link rel="preload" href="https://unpkg.com/open-props/easings.min.css" as="style" />

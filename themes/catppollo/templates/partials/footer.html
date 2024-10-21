@@ -1,12 +1,14 @@
 <footer>
   <div>
     <div>
+      {% if config.extra.logo_dark and config.extra.logo_light %}
       <img
         class="logo"
         width="100px"
         src={{ get_url(path=config.extra.logo_dark) }}
       />
-      <div>made with ❤️ by sunnymonster</div>
+      {% endif %}
+      <div>{{ config.extra.footer_note | default(value="kinda empty here...") }}</div>
     </div>
     <!-- TODO: make this configurable instead-->
     <a href={{ get_url(path="credits" ) }}>credits</a>

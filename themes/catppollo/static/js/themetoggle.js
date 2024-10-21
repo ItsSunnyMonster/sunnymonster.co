@@ -28,15 +28,19 @@ function updateItemToggleTheme() {
   if (mode === "dark") {
     htmlElement.classList.remove("light");
     htmlElement.classList.add("dark");
-    iconElements.forEach((img) => {
-      img.src = get_dark();
-    });
+    if (hasLogo) {
+      iconElements.forEach((img) => {
+        img.src = get_dark();
+      });
+    }
   } else if (mode === "light") {
     htmlElement.classList.remove("dark");
     htmlElement.classList.add("light");
-    iconElements.forEach((img) => {
-      img.src = get_light();
-    });
+    if (hasLogo) {
+      iconElements.forEach((img) => {
+        img.src = get_light();
+      });
+    }
   }
 }
 
