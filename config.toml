@@ -40,3 +40,5 @@ mathjax_dollar_inline_enable = true
 use_cdn = true
 favicon = "icons/rounded.png"
 accent_color = "#f9e2af"
+logo_dark = "icons/dark.png"
+logo_light = "icons/light.png"

@@ -14,12 +14,14 @@
         {% include "_giscus_script.html" %} {% endif %}
       </div>
 
+      <!-- TODO: separate this into a partial -->
       <footer>
         <div>
           <div>
-            <img class="logo" width="100px" src={{ "icons/no_background.png" }} />
+            <img class="logo" width="100px" src={{ get_url(path=config.extra.logo_dark) }} />
             <div>made with ❤️ by sunnymonster</div>
           </div>
+          <!-- TODO: make this configurable instead-->
           <a href={{ get_url(path="credits" ) }}>credits</a>
         </div>
       </footer>
