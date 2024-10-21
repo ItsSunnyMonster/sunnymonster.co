@@ -33,6 +33,12 @@ socials = [
   { name = "github", url = "https://github.com/ItsSunnyMonster", icon = "github" },
   { name = "youtube", url = "https://youtube.com/@smprogramming", icon = "youtube" },
 ]
+
+footer_links = [
+  { name = "credits", url = "/credits" },
+  # { name = "github", url = "/BLAH" },
+]
+
 fancy_code = true
 toc = true
 mathjax = true

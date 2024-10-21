@@ -1,6 +1,6 @@
 <footer>
   <div>
-    <div>
+    <div class="left_wrapper">
       {% if config.extra.logo_dark and config.extra.logo_light %}
       <img
         class="logo"
@@ -11,6 +11,13 @@
       <div>{{ config.extra.footer_note | default(value="kinda empty here...") }}</div>
     </div>
     <!-- TODO: make this configurable instead-->
-    <a href={{ get_url(path="credits" ) }}>credits</a>
+    <div class="links_wrapper">
+        <div style="color:var(--overlay2)">Links</div>
+        {% if config.extra.footer_links %}
+            {% for link in config.extra.footer_links %}
+                <a href={{ get_url(path=link.url) }}>{{ link.name }}</a>
+            {% endfor %}
+        {% endif %}
+    </div>
   </div>
 </footer>

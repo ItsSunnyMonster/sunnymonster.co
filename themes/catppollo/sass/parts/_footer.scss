@@ -39,23 +39,33 @@ footer > div {
   }
 }
 
-footer > div > div {
+.left_wrapper {
   display: flex;
   align-items: center;
   gap: 1.5em;
 }
 
 footer a {
-  text-decoration: underline;
   color: var(--blue);
 }
 
 footer a::after {
-  display: none;
+  content: "↗";
+  display: inline;
+  color: inherit;
+  position: unset;
+  background: none;
+  font-family: "Jetbrains Mono";
+  margin-left: 3px;
 }
 
 footer a:hover {
   color: var(--subtext0);
+}
+
+.links_wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
