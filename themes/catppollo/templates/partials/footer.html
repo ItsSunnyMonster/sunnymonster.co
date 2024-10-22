@@ -15,7 +15,11 @@
         <div style="color:var(--overlay2)">Links</div>
         {% if config.extra.footer_links %}
             {% for link in config.extra.footer_links %}
-                <a href={{ get_url(path=link.url) }}>{{ link.name }}</a>
+                {% if link.external %}
+                    <a href={{ link.url }}>{{ link.name }}</a>
+                {% else %}
+                    <a href={{ get_url(path=link.url) }}>{{ link.name }}</a>
+                {% endif %}
             {% endfor %}
         {% endif %}
     </div>

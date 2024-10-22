@@ -35,8 +35,8 @@ socials = [
 ]
 
 footer_links = [
-  { name = "credits", url = "/credits" },
-  # { name = "github", url = "/BLAH" },
+  { name = "credits", url = "/credits", external = false },
+  { name = "github", url = "https://github.com/ItsSunnyMonster/sunnymonster.co", external = true },
 ]
 
 fancy_code = true
