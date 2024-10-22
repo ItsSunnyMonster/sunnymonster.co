@@ -37,6 +37,10 @@ footer > div {
     justify-content: center;
     column-gap: 10em;
   }
+
+  .links_wrapper {
+    align-items: center;
+  }
 }
 
 .left_wrapper {
@@ -50,13 +54,21 @@ footer a {
 }
 
 footer a::after {
+  all: unset;
   content: "↗";
   display: inline;
   color: inherit;
-  position: unset;
+  position: absolute;
   background: none;
   font-family: "Jetbrains Mono";
   margin-left: 3px;
+}
+
+footer a:hover::after {
+  left: unset;
+  right: unset;
+  top: unset;
+  bottom: unset;
 }
 
 footer a:hover {
