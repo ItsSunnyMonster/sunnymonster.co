@@ -2,6 +2,9 @@
 
 The source code to my website :)
 
+It is a huge mess because my editor keeps trying to autoformat the template files
+as if it is an html file.
+
 ## Licensing
 
 This might get confusing so please follow along.
