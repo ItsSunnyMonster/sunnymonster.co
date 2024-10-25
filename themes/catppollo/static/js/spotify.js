@@ -28,12 +28,15 @@ function getDuration(ms) {
   return `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 }
 
-let secondsTimeout;
+let secondsInterval;
+let refreshTimeout;
 let progressMs = 0;
 
 const refreshIntervalSeconds = 60;
 
 async function main() {
+  if (refreshTimeout) clearTimeout(refreshTimeout);
+
   let data = await fetch(getFunctionsUrl(), {
     method: "GET",
   }).then((response) => response.json());
@@ -42,11 +45,12 @@ async function main() {
     headerElement.innerText = "Last Played";
     progressContainer.style.display = "none";
     verticalContainer.classList.add("centered");
-    clearInterval(secondsTimeout);
-  }
-  if (data.isPaused) {
+    clearInterval(secondsInterval);
+  } else if (data.isPaused) {
     headerElement.innerText = "Currently Paused On";
-    clearInterval(secondsTimeout);
+    clearInterval(secondsInterval);
+  } else {
+    headerElement.innerText = "Currently Listening To";
   }
   trackNameElement.innerText = data.trackName;
   trackNameElement.classList.remove("disabled");
@@ -93,8 +97,8 @@ async function main() {
     durationLabel.innerText = getDuration(data.durationMs);
   }
 
-  if (secondsTimeout) {
-    clearInterval(secondsTimeout);
+  if (secondsInterval) {
+    clearInterval(secondsInterval);
   }
 
   if (!data.isPaused && data.isPlayingNow) {
@@ -104,7 +108,7 @@ async function main() {
       () => {
         let handler = () => {
           if (progressMs > data.durationMs) {
-            clearInterval(secondsTimeout);
+            clearInterval(secondsInterval);
             main().then();
           }
 
@@ -117,13 +121,16 @@ async function main() {
           progressMs += 1000;
         };
         handler();
-        secondsTimeout = setInterval(handler, 1000);
+        secondsInterval = setInterval(handler, 1000);
       },
       progressMs - Math.floor(progressMs / 1000) * 1000,
     );
   }
+
+  refreshTimeout = setTimeout(
+    () => main().then(),
+    refreshIntervalSeconds * 1000,
+  );
 }
 
 main().then();
-
-setInterval(() => main().then(), refreshIntervalSeconds * 1000);
