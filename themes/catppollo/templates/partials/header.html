@@ -145,7 +145,7 @@
         <script src={{ get_url(path="js/note.js") }}></script>
     {% endif %}
 
-    {% if config.extra.mathjax | default(value=false) %}
+    {% if (config.extra.mathjax | default(value=false)) or (page.extra.mathjax | default(value=false)) %}
         {% if config.extra.mathjax_dollar_inline_enable | default(value=false) %}
             <script>
             MathJax = {
@@ -158,6 +158,13 @@
         <script type="text/javascript" id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>
+    {% endif %}
+
+    {% if current_path == "/" and config.extra.use_spotify %}
+        <script>function getFunctionsUrl() {
+          return "{{ get_url(path="/.netlify/functions/__get_spotify_now_playing") }}";
+        }</script>
+        <script src={{ get_url(path="js/spotify.js") }} defer></script>
     {% endif %}
 
     {# RSS #}

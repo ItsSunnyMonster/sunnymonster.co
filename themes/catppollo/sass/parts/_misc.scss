@@ -49,10 +49,19 @@ a {
   // Make sure the underline is at the top
   position: relative; // needed for z-index
   //z-index: 1;
+  z-index: 9999;
 
   white-space: nowrap;
 
   transition: all 150ms ease-in-out;
+}
+
+a.disabled {
+  pointer-events: none;
+}
+
+a.disabled::after {
+  display: none;
 }
 
 a.zola-anchor {
@@ -66,6 +75,7 @@ a:hover {
 a::after {
   content: "";
   position: absolute;
+  display: block;
   bottom: -4px;
   left: 0;
   right: 0;

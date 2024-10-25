@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@netlify/functions": "^2.8.2",
+    "spotify-web-api-node": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.9",
+    "@types/spotify-web-api-node": "^5.0.11"
+  }
+}

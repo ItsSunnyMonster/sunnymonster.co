@@ -1,0 +1,119 @@
+.spotify-inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface0);
+  padding: 20px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  transition: background-color 400ms ease-in-out;
+}
+
+.spotify-image-container {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.spotify-image-container > svg {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  fill: var(--yellow);
+  width: 80px;
+}
+
+.spotify-image-container > img {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.spotify-vertical-container {
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.spotify-vertical-container.centered {
+  justify-content: center;
+}
+
+.progress-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--overlay2);
+  font-weight: 300;
+  font-size: 0.8em;
+  margin: 0 50px;
+  position: relative;
+  height: 30px;
+}
+
+.progress-bar {
+  --progress: 0%;
+  height: 5px;
+  background-color: var(--surface2);
+  flex: 1;
+  border-radius: 2.5px;
+  position: relative;
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: calc(100% - var(--progress));
+  bottom: 0;
+  background-color: var(--yellow);
+  // transform: scaleX(var(--progress));
+  border-radius: 2.5px;
+  transform-origin: left;
+}
+
+.progress-label {
+  position: absolute;
+  right: calc(100% + 10px);
+}
+
+.duration-label {
+  position: absolute;
+  left: calc(100% + 10px);
+}
+
+.spotify-track-info-container {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.spotify-artists-container {
+  display: flex;
+  color: var(--overlay2);
+  flex-wrap: wrap;
+}
+
+.spotify-artists-container a {
+  font-weight: 300;
+}
+
+.spotify-artists-container a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.spotify-artists-container a::after {
+  all: unset;
+}

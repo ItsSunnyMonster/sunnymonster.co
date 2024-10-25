@@ -41,7 +41,6 @@ footer_links = [
 
 fancy_code = true
 toc = true
-mathjax = true
 mathjax_dollar_inline_enable = true
 use_cdn = true
 favicon = "icons/rounded.png"
@@ -49,3 +48,4 @@ accent_color = "#f9e2af"
 logo_dark = "icons/dark.png"
 logo_light = "icons/light.png"
 footer_note = "made with ❤️ by sunnymonster"
+use_spotify = true

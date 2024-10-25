@@ -1,0 +1,20 @@
+<div class="spotify-container">
+  <h2>Currently Listening To</h2>
+  <div class="spotify-inner-container">
+    <div class="spotify-image-container">
+      <svg data-src={{ get_url(path="icons/alto_clef_svg.svg") }} />
+      <img src={{ get_url(path="icons/alto_clef_svg.svg") }} width="80px" height="80px" />
+    </div>
+    <div class="spotify-vertical-container centered">
+      <div class="spotify-track-info-container">
+        <a class="song-link disabled">Nothing yet.</a>
+        <div class="spotify-artists-container"></div>
+      </div>
+      <div class="progress-container" style="display: none">
+        <div class="progress-label">--:--</div>
+        <div class="progress-bar"></div>
+        <div class="duration-label">--:--</div>
+      </div>
+    </div>
+  </div>
+</div>
