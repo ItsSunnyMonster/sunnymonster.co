@@ -28,7 +28,11 @@ import { Context } from "@netlify/functions";
 //         "Content-Type": "application/x-www-form-urlencoded",
 //         Authorization:
 //           "Basic " +
-//           Buffer.from(Netlify.env.get("CLIENT_ID")!).toString("base64"),
+//           Buffer.from(
+//             Netlify.env.get("CLIENT_ID")! +
+//               ":" +
+//               Netlify.env.get("CLIENT_SECRET"),
+//           ).toString("base64"),
 //       },
 //       body: objectToURLSearchParams(new_request).toString(),
 //     });
