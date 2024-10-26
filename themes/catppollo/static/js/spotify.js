@@ -10,9 +10,9 @@ const progressLabel = document.querySelector(".progress-label");
 const durationLabel = document.querySelector(".duration-label");
 const verticalContainer = document.querySelector(".spotify-vertical-container");
 
-function getFunctionsUrl() {
-  return "http://localhost:8888/.netlify/functions/__get_spotify_now_playing";
-}
+// function getFunctionsUrl() {
+//   return "http://localhost:8888/.netlify/functions/__get_spotify_now_playing";
+// }
 
 function getDuration(ms) {
   let seconds = Math.floor(ms / 1000);
