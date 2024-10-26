@@ -184,6 +184,8 @@
         <link id="darkModeStyle" rel="stylesheet" type="text/css" href="{{ get_url(path='theme/dark.css') }}" />
     {% endif %}
 
+    <script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js' defer></script>
+
     <!-- Set the correct theme in the script -->
     <script src={{ get_url(path="js/themetoggle.js") }}></script>
     {% if theme == "dark" %}
