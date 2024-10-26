@@ -1,6 +1,8 @@
 **/.DS_STORE
 public/
 
+.envrc
+
 # Local Netlify folder
 .netlify
 
