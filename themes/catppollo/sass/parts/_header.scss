@@ -272,14 +272,14 @@ header nav .menu-wrapper {
   transform: translate(0, -8px) rotate(315deg);
 }
 
-@media (min-width: 751px) {
+@media (min-width: 796px) {
   .mobile {
     display: none;
   }
 }
 
 /* Mobile-specific adjustments */
-@media (max-width: 750px) {
+@media (max-width: 795px) {
   header {
     flex-direction: column;
     align-items: center;

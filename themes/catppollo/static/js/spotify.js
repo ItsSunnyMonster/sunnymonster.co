@@ -1,5 +1,6 @@
 const headerElement = document.querySelector(".spotify-container > h2");
 const trackNameElement = document.querySelector(".song-link");
+const trackNameContent = document.querySelector(".title-overflow");
 const artistsElement = document.querySelector(".spotify-artists-container");
 const svg = document.querySelector(".spotify-image-container > svg");
 const cover = document.querySelector(".spotify-image-container > img");
@@ -9,9 +10,9 @@ const progressLabel = document.querySelector(".progress-label");
 const durationLabel = document.querySelector(".duration-label");
 const verticalContainer = document.querySelector(".spotify-vertical-container");
 
-// function getFunctionsUrl() {
-//   return "http://localhost:8888/.netlify/functions/__get_spotify_now_playing";
-// }
+function getFunctionsUrl() {
+  return "http://localhost:8888/.netlify/functions/__get_spotify_now_playing";
+}
 
 function getDuration(ms) {
   let seconds = Math.floor(ms / 1000);
@@ -52,7 +53,7 @@ async function main() {
   } else {
     headerElement.innerText = "Currently Listening To";
   }
-  trackNameElement.innerText = data.trackName;
+  trackNameContent.innerText = data.trackName;
   trackNameElement.classList.remove("disabled");
   trackNameElement.setAttribute("href", data.trackLink);
   trackNameElement.setAttribute("target", "_blank");

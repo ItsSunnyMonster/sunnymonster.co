@@ -1,20 +1,30 @@
 .spotify-inner-container {
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
   background-color: var(--surface0);
   padding: 20px;
   border-radius: 10px;
-  flex-wrap: wrap;
   gap: 20px;
 
   transition: background-color 400ms ease-in-out;
+}
+
+@media (max-width: 795px) {
+  .spotify-inner-container {
+    flex-direction: column;
+  }
+
+  .spotify-track-info-container {
+    justify-content: center;
+  }
 }
 
 .spotify-image-container {
   width: 80px;
   height: 80px;
   position: relative;
+  align-self: center;
 }
 
 .spotify-image-container > svg {
@@ -41,10 +51,17 @@
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+  min-width: 0;
 }
 
 .spotify-vertical-container.centered {
   justify-content: center;
+}
+
+.title-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .progress-container {
@@ -57,6 +74,10 @@
   margin: 0 50px;
   position: relative;
   height: 30px;
+}
+
+.song-link {
+  min-width: 0;
 }
 
 .progress-bar {
